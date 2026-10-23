@@ -3,22 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // Works both at username.github.io/KreeRepo/ and at a custom domain root.
+    var root = /^\/kreerepo\//i.test(location.pathname) ? location.pathname.split('/').slice(0, 2).join('/') + '/' : '/';
+    document.write('<base href="' + root + '">');
+  </script>
   <title>Page not found — corgi.com</title>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;1,400&family=Young+Serif&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header"><a class="wordmark" href="/">corgi.com</a></header>
+  <header class="site-header"><a class="wordmark" href="./">corgi.com</a></header>
   <main>
     <section class="lost">
       <h1 class="squat">This page was eaten.</h1>
       <p>It was here a moment ago. Benji was seen near it, smiling. No one has been charged.</p>
-      <p><a href="/">Go back to the home page</a> before anything else of yours goes missing.</p>
+      <p><a href="./">Go back to the home page</a> before anything else of yours goes missing.</p>
     </section>
   </main>
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
